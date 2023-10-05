@@ -1,9 +1,9 @@
 <script setup>
-
+import SinglePostComponent from "./SinglePostComponent.vue";
 </script>
 
 <template>
-<div>111111</div>
+<div><SinglePostComponent></SinglePostComponent></div>
 </template>
 
 <style scoped>
