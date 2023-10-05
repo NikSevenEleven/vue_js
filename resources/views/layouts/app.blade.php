@@ -18,7 +18,7 @@
 </head>
 <body>
     <div id="app">
-        <div><example-component></example-component></div>
+        <div><post-component></post-component></div>
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
