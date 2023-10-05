@@ -10,6 +10,11 @@ function sayHi()
     alert('Hi')
 }
 
+function sayJob()
+{
+    return this.data.name +' работает в булочной'
+}
+
 let data =
     {
         name: 'Vasia',
@@ -22,8 +27,10 @@ let data =
 <template>
     <div><SinglePostComponent></SinglePostComponent></div>
     <div>Name:{{data.name}}</div>
+    <div>Job:{{sayJob()}}</div>
     <div><button @click="sayHello">Hello</button></div>
     <div><button @click="sayHi">Hi</button></div>
+
 </template>
 
 <style scoped>
