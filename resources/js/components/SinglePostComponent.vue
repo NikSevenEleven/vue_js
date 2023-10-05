@@ -3,7 +3,7 @@
 </script>
 
 <template>
-<div>Single Post</div>
+<div>111111</div>
 </template>
 
 <style scoped>
