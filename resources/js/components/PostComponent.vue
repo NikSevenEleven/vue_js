@@ -1,6 +1,6 @@
 <script setup>
 import SinglePostComponent from "./SinglePostComponent.vue";
-import {ref} from 'vue'
+import {ref,computed} from 'vue'
 import {reactive} from 'vue'
 function sayHello()
 {
@@ -39,7 +39,12 @@ const myObject = reactive({
     publishedAt: '2016-04-10'
 })
 
+const personAgeMoreTwenty = computed({
+    get: () => persons.value.filter(function (person) {
+       return person.age >1
+    })
 
+})
 </script>
 <template>
     <div><SinglePostComponent></SinglePostComponent></div>
@@ -53,7 +58,7 @@ const myObject = reactive({
         </tr>
         </thead>
         <tbody>
-        <tr v-for="person in persons">
+        <tr v-for="person in personAgeMoreTwenty">
             <th scope="row">{{ person.id }}</th>
             <th scope="row">{{ person.name }}</th>
             <th scope="row">{{ person.age }}</th>
